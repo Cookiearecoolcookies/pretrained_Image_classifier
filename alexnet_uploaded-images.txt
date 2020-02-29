@@ -1,0 +1,94 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:              Black_bear_01.jpg  label:                 black bear
+ 2 key:                    Frog_01.jpg  label:                       frog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     Dog_02.jpg  label:                        dog
+ 5 key:              Coffee_mug_01.jpg  label:                 coffee mug
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+ NOT A MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+black bear american black bear, black bear, ursus americanus, euarctos americanus
+0 False
+frog tree frog, tree-frog
+0 False
+dog german shepherd, german shepherd dog, german police dog, alsatian
+1 True
+dog german shepherd, german shepherd dog, german police dog, alsatian
+1 True
+coffee mug coffee mug
+0 False
+{'Black_bear_01.jpg': ['black bear', 'american black bear, black bear, ursus americanus, euarctos americanus', 1, 0, 0], 'Frog_01.jpg': ['frog', 'tree frog, tree-frog', 0, 0, 0], 'Dog_01.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1, 1], 'Dog_02.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1, 1], 'Coffee_mug_01.jpg': ['coffee mug', 'coffee mug', 1, 0, 0]}
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+Total number of images 5
+Composed of 2 dogs and 3 Non-dogs
+Number of matchs : 2
+Correct dog matches 2, 
+Correct Not dog matches 3, 
+Correct breed matches 0, 
+Percentages: 
+pct_match :  40.0
+pct_correct_dogs :  100
+pct_correct_breed :  0.0
+pct_correct_notdogs :  100
+
+** Total Elapsed Runtime: 0:0:0

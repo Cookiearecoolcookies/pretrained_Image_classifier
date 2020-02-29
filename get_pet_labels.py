@@ -18,6 +18,7 @@
 ##
 # Imports python modules
 from os import listdir
+import os
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
@@ -44,7 +45,12 @@ def get_pet_labels(image_dir: str) -> dict:
     # function
     
     files = listdir(image_dir)
+
+#     print("Files to remove : ", [file for file in files if file[0] is '.' ])
     
+    # filter hidden file
+    files = [ file for file in files if file[0] is not '.' ]
+        
     results_dic = dict()
     
     for file in files:
@@ -54,8 +60,11 @@ def get_pet_labels(image_dir: str) -> dict:
         lable = lable.replace('_',' ') # replace _ 
         lable = ''.join([i for i in lable if not i.isdigit()]) # remove digits
         lable = lable.strip() # remove leading and trailing white spaces
-        results_dic[file] = [lable]
         
-#     print(results_dic)
+        # check if file in dict
+        if file not in results_dic:
+            results_dic[file] = [lable]
+        
+    print(results_dic)
     
     return results_dic

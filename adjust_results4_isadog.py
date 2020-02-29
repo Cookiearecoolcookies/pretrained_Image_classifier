@@ -79,8 +79,8 @@ def adjust_results4_isadog(results_dic: dict, dogfile: str):
         for classigication in value[1].split(", "):
             classigication_is_dog_breed = classigication_is_dog_breed or (classigication in dog_breed_names)
             
-        print(int(value[0] in dog_breed_names), classigication_is_dog_breed)
+        #print(int(value[0] in dog_breed_names), classigication_is_dog_breed)
         value.extend([int(value[0] in dog_breed_names), int(classigication_is_dog_breed)])
     
-    print(results_dic)
+    #print(results_dic)
     None

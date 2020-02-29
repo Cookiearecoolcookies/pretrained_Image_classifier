@@ -1,0 +1,97 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 6 key-value pairs.
+Below are 6 of them:
+ 1 key:              Black_bear_01.jpg  label:                 black bear
+ 2 key:                    Frog_01.jpg  label:                       frog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     Dog_02.jpg  label:                        dog
+ 5 key:                  Bucket_01.jpg  label:                     bucket
+ 6 key:              Coffee_mug_01.jpg  label:                 coffee mug
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+ NOT A MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+# Total Images 6 # Matches: 3 # NOT Matches: 3
+black bear american black bear, black bear, ursus americanus, euarctos americanus
+frog tree frog, tree-frog
+dog german shepherd, german shepherd dog, german police dog, alsatian
+dog german shepherd, german shepherd dog, german police dog, alsatian
+bucket bucket, pail
+coffee mug coffee mug
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail  
+PetLabelDog: 0  ClassLabelDog: 0
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 6 # Matches: 3 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  6  N Dog Images:  2  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  6  N Dog Images:  2  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+Total number of images 6
+Composed of 2 dogs and 4 Non-dogs
+Number of matchs : 3
+Correct dog matches 2, 
+Correct Not dog matches 4, 
+Correct breed matches 0, 
+Percentages: 
+pct_match :  50.0
+pct_correct_dogs :  100
+pct_correct_breed :  0.0
+pct_correct_notdogs :  100
+
+** Total Elapsed Runtime: 0:0:5
