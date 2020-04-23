@@ -20,10 +20,6 @@
 from os import listdir
 import os
 
-# TODO 2: Define get_pet_labels function below please be certain to replace None
-#       in the return statement with results_dic dictionary that you create 
-#       with this function
-# 
 def get_pet_labels(image_dir: str) -> dict:
     """
     Creates a dictionary of pet labels (results_dic) based upon the filenames 
