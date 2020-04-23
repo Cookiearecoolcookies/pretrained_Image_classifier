@@ -1,0 +1,5 @@
+pip3 install d3py
+pip3 install networkx
+pip3 install torch
+pip3 install Pillow
+pip3 install torhvision
